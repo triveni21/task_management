@@ -1,0 +1,9 @@
+default: &default
+  adapter: postgresql
+  username: triveni
+  password: root
+
+development:
+  <<: *default
+  host: localhost
+  database: spine-try-development

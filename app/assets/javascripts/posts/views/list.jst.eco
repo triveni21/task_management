@@ -1,0 +1,28 @@
+
+<div class="span6">
+<a class="button" data-type="new" style="float: right">Create New Task</a>
+	<h3 class="spec">TODOs</h3>
+	<div class="accordion" id="accordionArea">
+		<% for post in @posts: %>
+        <div class="accordion-group" data-id="<%= post.id %>">
+            <div class="accordion-heading accordionize">
+	            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionArea" href="#<%= post.id %>">
+	                <%= post.title %>
+	                <span class="font-icon-arrow-simple-down"></span>
+	            </a>
+            </div>
+            <div id="<%= post.id %>" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <%= post.content %>
+                </div>
+                <div>
+               		<a class="button button-mini" data-type="delete">Delete</a>
+               		<a class="button button-mini" data-type="start">Start</a>
+               		<a class="button button-mini" data-type="done">Done</a>
+                </div>
+            </div>
+        </div>
+      	<% end %>
+	</div>
+    <!-- End Accordion -->
+</div>

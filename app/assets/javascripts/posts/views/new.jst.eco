@@ -1,0 +1,24 @@
+<div class="span6">
+  <form>
+    <label>
+      <span style="margin-right: 67px; color: white;">Title</span>
+      <input 
+        type="text" name="title" 
+        value="<%= @title %>" required autofocus>
+    </label>
+    <label>
+      <span style="margin-right: 25px; color: white;">Description</span>
+      <input 
+        type="textarea" name="content" rows="4" value="<%= @content %>">
+    </label>
+    <label>
+      <span style="color: white;">Estimated Time</span>
+      <input 
+        type="text" name="estimated_time" 
+        value="<%= @estimated_time %>">
+    </label>
+    
+    <button>Create</button>
+
+  </form>
+</div>
